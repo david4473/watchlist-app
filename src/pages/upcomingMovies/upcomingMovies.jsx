@@ -37,7 +37,7 @@ function UpcomingMovies() {
   return (
     <div>
       <h3>Upcoming Movies</h3>
-      <div className="inner page">
+      <div className="page_wrapper">
         <Content movies={movies} location={location} />
         <button onClick={handleLoad}>Load more</button>
       </div>

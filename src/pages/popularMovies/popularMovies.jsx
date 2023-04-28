@@ -30,8 +30,8 @@ function PopularMovies() {
 
   return (
     <div>
-      <h3>Popular New Releasese</h3>
-      <div className="inner page">
+      <h3>Popular New Releases</h3>
+      <div className="page_wrapper">
         <Content movies={movies} location={location} />
         <button onClick={handleLoad}>Load more</button>
       </div>

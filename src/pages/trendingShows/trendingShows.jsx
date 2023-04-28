@@ -29,7 +29,7 @@ function TrendingShows() {
 
   return (
     <div>
-      <div className="inner page">
+      <div className="page_wrapper">
         <Content movies={movies} location={location} />
         <button onClick={handleLoad}>Load more</button>
       </div>

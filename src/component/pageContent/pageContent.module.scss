@@ -1,0 +1,32 @@
+.content_wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  gap: 28px;
+  margin: 0 auto;
+  max-width: 840px;
+}
+
+.content {
+  position: relative;
+}
+
+.fave_icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+@media (max-width: 768px) {
+  .content_wrapper {
+    grid-template-columns: repeat(
+      2,
+      140px
+    ); /* Two columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .content_wrapper {
+    grid-template-columns: 140px; /* Single column for even smaller screens */
+  }
+}

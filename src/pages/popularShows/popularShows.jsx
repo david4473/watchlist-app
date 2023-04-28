@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSlice } from "../../store/store";
-import Cards from "../../component/cards";
+import Cards from "../../component/cards/cards";
 import Content from "../../component/pageContent/pageContent";
 import styles from "./popularShows.module.scss";
 
@@ -31,7 +31,7 @@ function PopularShows() {
   return (
     <div>
       <h3>Popular Shows</h3>
-      <div className="inner page">
+      <div className="page_wrapper">
         <Content movies={movies} location={location} />
         <button onClick={handleLoad}>Load more</button>
       </div>

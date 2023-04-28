@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Cards from "./component/cards";
-import "./App.css";
+import Cards from "./component/cards/cards";
+import "./App.scss";
 import { Link } from "react-router-dom";
 import Trending from "./component/trending";
 import InTheaters from "./component/inTheaters";

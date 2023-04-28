@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../cards";
+import Cards from "../cards/cards";
 import styles from "./pageContent.module.scss";
 import { useSlice } from "../../store/store";
 import heart from "react-useanimations/lib/heart";
@@ -19,29 +19,30 @@ const Content = ({ movies, location }) => {
   return (
     <>
       {/* Render the movie cards for the current page */}
-      <div className="page">
+      <div className={styles.content_wrapper}>
         {movies &&
           movies.map((m, i) => (
-            <div key={m.id}>
+            <div key={m.id} className={styles.content}>
               <Cards
                 image={`https://image.tmdb.org/t/p/w500${m.poster_path}`}
                 title={m.original_title}
                 link={`${location}/${m.id}`}
               />
-              <UseAnimations
-                animation={heart}
-                size={20}
-                checked={true}
-                onClick={() => {
-                  setChecked(!checked);
-                  watchlist.find((movie) => movie.id === m.id)
-                    ? remove(m.id)
-                    : favorite(m);
-                }}
-                strokeColor={"white"}
-                fillColor={"red"}
-                wrapperStyle={{ cursor: "pointer" }}
-              />
+              <div className={styles.fave_icon}>
+                <UseAnimations
+                  animation={heart}
+                  size={20}
+                  onClick={() => {
+                    setChecked(!checked);
+                    watchlist.find((movie) => movie.id === m.id)
+                      ? remove(m.id)
+                      : favorite(m);
+                  }}
+                  strokeColor={"white"}
+                  fillColor={"red"}
+                  wrapperStyle={{ cursor: "pointer" }}
+                />
+              </div>
             </div>
           ))}
       </div>

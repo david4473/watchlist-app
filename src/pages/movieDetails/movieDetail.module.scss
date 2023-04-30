@@ -28,7 +28,6 @@ $header-overlay: 0%;
   width: 100%;
   display: grid;
   position: relative;
-  place-items: center start;
 
   &::after {
     content: "";
@@ -99,6 +98,7 @@ $header-overlay: 0%;
   .header_content {
     z-index: 1;
     margin-left: 50px;
+    margin-top: 70px;
     position: relative;
 
     &::before {

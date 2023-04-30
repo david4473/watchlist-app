@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Trending from "../../component/trending";
-import InTheaters from "../../component/inTheaters";
-import Popular from "../../component/popular";
+import Trending from "../../component/discover components/trending";
+import InTheaters from "../../component/discover components/inTheaters";
+import Popular from "../../component/discover components/popular";
 
 const Discover = () => {
   return (

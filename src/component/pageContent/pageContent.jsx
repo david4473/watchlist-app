@@ -14,8 +14,6 @@ const Content = ({ movies, location }) => {
   const favorite = useSlice((state) => state.addToWatchlist);
   const watchlist = useSlice((state) => state.watchList);
 
-  console.log(checked);
-
   return (
     <>
       {/* Render the movie cards for the current page */}

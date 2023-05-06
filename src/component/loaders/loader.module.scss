@@ -148,6 +148,50 @@
   }
 }
 
+.card {
+  position: relative;
+  width: 140px;
+  height: 200px;
+  background-image: linear-gradient(
+    90deg,
+    #222222 25%,
+    #272727 37%,
+    #222222 63%
+  );
+  background-size: 200% 100%;
+  animation: loader-animation 2s infinite linear;
+
+  .card_items {
+    position: absolute;
+    bottom: 20px;
+    left: 5px;
+    width: 70%;
+    height: 10px;
+    background-image: linear-gradient(
+      90deg,
+      #222222 25%,
+      #c4c4c4 37%,
+      #222222 63%
+    );
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: loader-animation 1.5s infinite linear;
+  }
+
+  .card_items:nth-child(1) {
+    bottom: 60px;
+    width: 40%;
+  }
+  .card_items:nth-child(2) {
+    width: 60%;
+    bottom: 40px;
+  }
+
+  .card_items:nth-child(3) {
+    width: 90%;
+  }
+}
+
 @keyframes loader-animation {
   0% {
     background-position: 200% 0;

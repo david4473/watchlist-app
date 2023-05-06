@@ -1,11 +1,17 @@
+/* @use "../scss_files/_mixins.scss"; */
+
+@mixin center-div($num) {
+  margin: 0 auto;
+  max-width: $num;
+}
+
 #root {
   width: 100%;
   height: 100%;
 }
 
 .App {
-  max-width: 1300px;
-  margin: 0 auto;
+  @include center-div(840px);
   padding: 2rem;
 }
 

@@ -8,6 +8,7 @@ import GridLoader from "../../component/loaders/gridLoader";
 function WatchList() {
   const movies = useSlice((state) => state.watchList);
   const loading = useSlice((state) => state.loading);
+  console.log(loading);
 
   return (
     <>

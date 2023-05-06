@@ -1,0 +1,15 @@
+/* @use "../scss_files/_mixins.scss"; */
+
+@mixin center-div($num) {
+  margin: 0 auto;
+  max-width: $num;
+}
+
+nav {
+  outline: solid red 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  @include center-div(840px);
+}

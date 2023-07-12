@@ -6,7 +6,6 @@ import GetImageColor from "../../utils/getImageColor";
 import styles from "./movieDetail.module.scss";
 import arrowLeftCircle from "react-useanimations/lib/arrowLeftCircle";
 import UseAnimations from "react-useanimations";
-import GridLoader from "../../component/loaders/gridLoader";
 import DetailsLoader from "../../component/loaders/detailsLoader";
 
 export function Movie() {

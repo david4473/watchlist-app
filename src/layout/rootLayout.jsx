@@ -11,11 +11,19 @@ const RootLayout = () => {
           </div>
           <div className={styles.navigation}>
             <div className={styles.search_wrapper}>
-              <input type="text" placeholder="search watchlist" />
+              <input
+                className={styles.search}
+                type="text"
+                placeholder="Search watchlist"
+              />
             </div>
             <div className={styles.nav_list}>
-              <NavLink to="/">Watchlist</NavLink>
-              <NavLink to="discover">Discover</NavLink>
+              <NavLink className={styles.nav_link} to="/">
+                Watchlist
+              </NavLink>
+              <NavLink className={styles.nav_link} to="discover">
+                Discover
+              </NavLink>
             </div>
           </div>
         </nav>

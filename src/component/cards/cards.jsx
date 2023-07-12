@@ -8,8 +8,6 @@ function Cards({ title, image, link }) {
   const imgEl = useRef();
   const [loaded, setLoaded] = useState(false);
 
-  const loading = useSlice((state) => state.loading);
-
   const onImageLoad = () => setLoaded(true);
 
   useEffect(() => {
@@ -17,7 +15,6 @@ function Cards({ title, image, link }) {
 
     if (imgCurrent) {
       imgCurrent.addEventListener("load", onImageLoad);
-      console.log("loaded");
       return () => {
         removeEventListener("load", onImageLoad);
       };
@@ -30,20 +27,17 @@ function Cards({ title, image, link }) {
       : title;
 
   return (
-    <>
-      {!loading ? (
-        <div className={styles.cards}>
-          <Link to={link}>
-            <img ref={imgEl} src={image} alt={title} className={styles.img} />
-          </Link>
-          <Link to={link}>
-            <p className={styles.title}>{newTitle}</p>
-          </Link>
-        </div>
-      ) : (
-        <CardLoader />
-      )}
-    </>
+    <div className={styles.card_wrapper}>
+      {!loaded && <CardLoader />}
+      <div className={styles.cards}>
+        <Link to={link}>
+          <img ref={imgEl} src={image} alt={title} className={styles.img} />
+        </Link>
+        <Link to={link}>
+          <p className={styles.title}>{newTitle}</p>
+        </Link>
+      </div>
+    </div>
   );
 }
 

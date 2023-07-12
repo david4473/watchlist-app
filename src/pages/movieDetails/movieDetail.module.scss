@@ -244,15 +244,19 @@ $header-overlay: 0%;
   }
 }
 
+.cast_wrapper{
+  padding-left: 20px;
+}
 .casts {
   display: flex;
   gap: 20px;
-  overflow-y: auto;
   position: relative;
+  overflow-x: scroll;
 
   .cast_card {
-    width: 257px;
+    width: 140px;
     height: 254px;
+    flex-shrink: 0;
 
     .cast_image {
       width: 100%;

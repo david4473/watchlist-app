@@ -90,62 +90,13 @@
   animation: loader-animation 1.5s infinite linear;
 }
 
-/* grid layout skeleton loading styles */
+/* card skeleton loading styles */
 
-.grid_wrapper {
-  margin: 0 auto;
-  max-width: 840px;
-
-  ul {
-    display: grid;
-    grid-template-columns: repeat(5, 140px);
-    gap: 20px;
-
-    .griditems {
-      position: relative;
-      width: 140px;
-      height: 200px;
-      background-image: linear-gradient(
-        90deg,
-        #222222 25%,
-        #272727 37%,
-        #222222 63%
-      );
-      background-size: 200% 100%;
-      animation: loader-animation 2s infinite linear;
-      list-style: none;
-    }
-
-    .griditems_text {
-      position: absolute;
-      bottom: 20px;
-      left: 5px;
-      width: 70%;
-      height: 10px;
-      background-image: linear-gradient(
-        90deg,
-        #222222 25%,
-        #c4c4c4 37%,
-        #222222 63%
-      );
-      background-size: 200% 100%;
-      border-radius: 10px;
-      animation: loader-animation 1.5s infinite linear;
-    }
-
-    .griditems_text:nth-child(1) {
-      bottom: 60px;
-      width: 40%;
-    }
-    .griditems_text:nth-child(2) {
-      width: 60%;
-      bottom: 40px;
-    }
-
-    .griditems_text:nth-child(3) {
-      width: 90%;
-    }
-  }
+.card_skeleton_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .card {
@@ -160,6 +111,7 @@
   );
   background-size: 200% 100%;
   animation: loader-animation 2s infinite linear;
+  border-radius: 10px;
 
   .card_items {
     position: absolute;

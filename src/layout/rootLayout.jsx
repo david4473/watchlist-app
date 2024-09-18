@@ -5,7 +5,7 @@ const RootLayout = () => {
   return (
     <div className={styles.root_layout}>
       <header>
-        <nav>
+        <nav className={styles.nav}>
           <div className={styles.logo}>
             <h3>Watcher</h3>
           </div>

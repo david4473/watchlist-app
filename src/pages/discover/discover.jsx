@@ -11,7 +11,7 @@ const Discover = () => {
       <div className="items">
         <div>
           <h3>Trending</h3>
-          <Link to={"/Trendingmovies"}>Show more</Link>
+          <Link to={"/trending"}>Show more</Link>
           <Trending />
         </div>
         <div className="slide">{/* placeholder */}</div>

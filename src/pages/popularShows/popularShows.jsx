@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useSlice } from "../../store/store";
+import { useStore } from "../../store/store";
 import Cards from "../../component/cards/cards";
 import Content from "../../component/pageContent/pageContent";
 import styles from "./popularShows.module.scss";
+import LoadButton from "../../component/Button/loadButton";
 
 function PopularShows() {
-  const movies = useSlice((state) => state.popularShows);
-  const loading = useSlice((state) => state.loading);
-  const fetch = useSlice((state) => state.fetchData);
-  const update = useSlice((state) => state.movieUpdate);
+  const movies = useStore((state) => state.popularShows);
+  const loading = useStore((state) => state.loading);
+  const fetch = useStore((state) => state.fetchData);
+  const update = useStore((state) => state.movieUpdate);
 
   const currentPage = React.useRef(1);
   const totalPage = 22;
@@ -33,8 +34,8 @@ function PopularShows() {
       <h3>Popular Shows</h3>
       <div className="page_wrapper">
         <Content movies={movies} location={location} />
-        <button onClick={handleLoad}>Load more</button>
       </div>
+      <LoadButton func={handleLoad} />
     </div>
   );
 }

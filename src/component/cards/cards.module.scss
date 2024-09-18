@@ -3,8 +3,9 @@
 }
 
 .cards {
-  width: 140px;
-  height: 200px;
+  width: 200px;
+  height: 304px;
+  margin-bottom: 10px;
 
   .img {
     width: 100%;
@@ -18,4 +19,12 @@
     margin-top: 5px;
     color: white;
   }
+}
+
+
+
+.fave_icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }

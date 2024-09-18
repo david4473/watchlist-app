@@ -1,10 +1,10 @@
 .content_wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 140px);
-  column-gap: 28px;
-  row-gap: 44px;
+  grid-template-columns: repeat(6, 200px);
+  column-gap: 45px;
+  row-gap: 57px;
   margin: 0 auto;
-  max-width: 840px;
+  max-width: max-content;
 }
 
 .content {

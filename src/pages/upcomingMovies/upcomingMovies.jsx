@@ -1,19 +1,16 @@
 import React, { useEffect, memo, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useSlice } from "../../store/store";
+import { useStore } from "../../store/store";
 import Content from "../../component/pageContent/pageContent";
 import styles from "./upcomingMovies.module.scss";
 import useScrollFunc from "../../hooks/useScrollFunc";
-import useFetch from "../../hooks/useFetch";
-import axios from "axios";
+import LoadButton from "../../component/Button/loadButton";
 
 function UpcomingMovies() {
-  const movies = useSlice((state) => state.upcomingMovies);
-  const loading = useSlice((state) => state.loading);
-  const fetch = useSlice((state) => state.fetchData);
-  const update = useSlice((state) => state.movieUpdate);
-  const [page, setPage] = useState([]);
-  const [data, setData] = useState(null);
+  const movies = useStore((state) => state.upcomingMovies);
+  const loading = useStore((state) => state.loading);
+  const fetch = useStore((state) => state.fetchMovies);
+  const update = useStore((state) => state.updateMovies);
 
   /*   const { data } = useFetch("movie/upcoming", `&page=${page}`); */
 
@@ -23,14 +20,17 @@ function UpcomingMovies() {
   const totalPage = 22;
 
   useEffect(() => {
-    fetch("upcoming", "movie", currentPage.current);
-  }, [fetch]);
+    if (movies.length === 0 && currentPage.current === 1) {
+      fetch("upcoming", currentPage.current);
+      console.log("ran: " + currentPage.current);
+    }
+  }, []);
 
   const location = useLocation().pathname;
 
   const handleLoad = async () => {
     currentPage.current++;
-    await fetch("upcoming", "movie", currentPage.current);
+    await fetch("upcoming", currentPage.current);
     await update(movies && movies, "upcomingMovies");
   };
 
@@ -39,8 +39,8 @@ function UpcomingMovies() {
       <h3>Upcoming Movies</h3>
       <div className="page_wrapper">
         <Content movies={movies} location={location} />
-        <button onClick={handleLoad}>Load more</button>
       </div>
+      <LoadButton func={handleLoad} />
     </div>
   );
 }

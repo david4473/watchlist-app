@@ -1,13 +1,11 @@
 import React from "react";
 import Content from "../../component/pageContent/pageContent";
-import { useLocation } from "react-router-dom";
-import { useSlice } from "../../store/store";
+import { useStore } from "../../store/store";
 import styles from "./watchList.module.scss";
 
 function WatchList() {
-  const movies = useSlice((state) => state.watchList);
-  const loading = useSlice((state) => state.loading);
-  console.log(loading);
+  const movies = useStore((state) => state.watchList);
+  const loading = useStore((state) => state.loading);
 
   return (
     <>

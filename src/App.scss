@@ -39,5 +39,18 @@
 
 .page_wrapper {
   margin: 20px auto;
-  max-width: 840px;
+  max-width: max-content;
+}
+
+.load_more{
+  margin: 20px auto;
+  padding: 10px;
+  width: 100px;
+
+    button{
+      cursor: pointer;
+      padding: 8px 10px;
+      border-radius: 50px;
+      background-color: gray;
+    }
 }

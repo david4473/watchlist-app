@@ -37,7 +37,7 @@ export function Movie() {
     navigate(-1);
   }
 
-  const backdropUri = "https://image.tmdb.org/t/p/w1280";
+  const backdropUri = "https://image.tmdb.org/t/p/original";
   const castImageUri = "https://image.tmdb.org/t/p/w185";
 
   /* console.log(movie);

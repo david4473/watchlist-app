@@ -29,7 +29,7 @@ nav {
       border: none;
       width: 82%;
       background-color: inherit;
-      outline: 1px solid red;
+      /* outline: 1px solid red; */
     }
   }
 
@@ -49,6 +49,10 @@ nav {
       margin-left: 20px;
     }
   }
+}
+
+.nav{
+  display: flex;
 }
 
 .logo {

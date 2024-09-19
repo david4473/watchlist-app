@@ -31,7 +31,7 @@ function PopularShows() {
 
   return (
     <div>
-      <h3>Popular Shows</h3>
+      <h1>Popular Shows</h1>
       <div className="page_wrapper">
         <Content movies={movies} location={location} />
       </div>

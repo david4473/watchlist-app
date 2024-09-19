@@ -9,7 +9,6 @@ function TrendingMovies() {
   const loading = useStore((state) => state.loading);
   const fetch = useStore((state) => state.fetchTrending);
   const update = useStore((state) => state.updateMovies);
-  const mo = useStore((state) => state.watchList);
 
   const currentPage = React.useRef(1);
   const totalPage = 22;

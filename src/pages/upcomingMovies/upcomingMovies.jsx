@@ -36,7 +36,7 @@ function UpcomingMovies() {
 
   return (
     <div>
-      <h3>Upcoming Movies</h3>
+      <h1>Upcoming Movies</h1>
       <div className="page_wrapper">
         <Content movies={movies} location={location} />
       </div>

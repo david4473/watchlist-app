@@ -1,4 +1,4 @@
-const useFromatDate = (dateString) => {
+const useFormatDate = (dateString) => {
   const date = new Date(dateString);
   const months = [
     "Jan",
@@ -20,4 +20,4 @@ const useFromatDate = (dateString) => {
   return { formatedDate, year };
 };
 
-export default useFromatDate;
+export default useFormatDate;

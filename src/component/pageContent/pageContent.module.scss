@@ -11,12 +11,6 @@
   position: relative;
 }
 
-.fave_icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-
 @media (max-width: 768px) {
   .content_wrapper {
     grid-template-columns: repeat(

@@ -10,7 +10,7 @@ function WatchList() {
   return (
     <>
       <div>
-        <h3>Watch list</h3>
+        <h1>Watch list</h1>
         {movies < 1 && <p>There are no movies in your watchlist. Add some </p>}
         <Content movies={movies} location={"/watchlist"} />
       </div>

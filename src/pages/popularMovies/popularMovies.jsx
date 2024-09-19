@@ -34,7 +34,7 @@ function PopularMovies() {
 
   return (
     <div>
-      <h3>Popular New Releases</h3>
+      <h1>Popular New Releases</h1>
       <div className="page_wrapper">
         <Content movies={movies} location={location} />
       </div>

@@ -24,6 +24,7 @@ function GetImageColor({ detectedColor, url }) {
       const green = pixelData[1];
       const blue = pixelData[2];
       const color = `RGB(${red}, ${green}, ${blue})`;
+
       detectedColor(color);
     };
   }, [detectedColor]);

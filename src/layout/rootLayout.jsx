@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import styles from "./rootLayout.module.scss";
+import Search from "../component/search";
 
 const RootLayout = () => {
   return (
@@ -11,11 +12,7 @@ const RootLayout = () => {
           </div>
           <div className={styles.navigation}>
             <div className={styles.search_wrapper}>
-              <input
-                className={styles.search}
-                type="text"
-                placeholder="Search watchlist"
-              />
+              <Search />
             </div>
             <div className={styles.nav_list}>
               <NavLink className={styles.nav_link} to="/">

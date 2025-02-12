@@ -12,8 +12,6 @@ export const createTrendingSlice = (set) => ({
         `https://api.themoviedb.org/3/trending/${type}?api_key=8214e027d9b81733c5b4760ea86276b9&language=en-US&page=${page}`
       );
 
-      console.log(res.data.results);
-
       const stateKey = {
         "movie/day": "trendingMovies",
         "tv/day": "trendingShows",

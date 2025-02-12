@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const useFetch = (media, page = "", append) => {
   const [data, setData] = useState(null);
@@ -10,30 +10,31 @@ const useFetch = (media, page = "", append) => {
   const APPEND_URL = "&append_to_response=";
   const TOKEN = import.meta.env.VITE_TOKEN;
 
-  console.log(
+  /*   console.log(
     `${BASE_URL}${media}${TOKEN}&language=en-US${page}${APPEND_URL}${append}`
-  );
+  ); */
+
+  const fetchDataFromApi = useCallback(async () => {
+    try {
+      const req = await axios.get(
+        `${BASE_URL}${media}${TOKEN}&language=en-US${page}${APPEND_URL}${append}`
+      );
+      const res = req.data;
+      setLoading(false);
+      setData(res);
+    } catch (error) {
+      setLoading(false);
+      setError(error);
+    }
+  }, [media, page, append]);
 
   useEffect(() => {
     setData(null);
     setLoading(true);
     setError(null);
-    const fetchDataFromApi = async () => {
-      try {
-        const req = await axios.get(
-          `${BASE_URL}${media}${TOKEN}&language=en-US${page}${APPEND_URL}${append}`
-        );
-        const res = req.data;
-        setLoading(false);
-        setData(res);
-      } catch (error) {
-        setLoading(false);
-        setError(error);
-      }
-    };
 
     fetchDataFromApi();
-  }, [media]);
+  }, [fetchDataFromApi]);
 
   return { data, loading, error };
 };

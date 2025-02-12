@@ -15,12 +15,31 @@ $header-overlay: 0%;
 .details_wrapper {
   position: relative;
 
+}
+
+.header_wrapper{
+  display: grid;
+  transition: all 0.5s;
+
+  .video, .header{
+  grid-column: 1;
+  grid-row: 1;
+  }
+}
+
+.video{
+  position: relative;
+
   .arrow_icon {
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 20px;
-    z-index: 2;
   }
+}
+
+.hide_header{
+  opacity: 0;
+  display: none;
 }
 
 .header {
@@ -28,6 +47,8 @@ $header-overlay: 0%;
   width: 100%;
   display: grid;
   position: relative;
+  
+
 
   &::after {
     content: "";
@@ -99,6 +120,7 @@ $header-overlay: 0%;
     z-index: 1;
     margin-left: 50px;
     margin-top: 70px;
+    width: fit-content;
     position: relative;
 
     &::before {
@@ -126,6 +148,15 @@ $header-overlay: 0%;
         line-height: 0;
       }
     }
+  }
+
+  .title_wrapper{
+    position: relative;
+  }
+
+  .play_wrapper{
+position: absolute;    
+right: -30px;
   }
 
   .tagline {
@@ -247,6 +278,8 @@ $header-overlay: 0%;
 .cast_wrapper{
   padding-left: 20px;
 }
+
+
 .casts {
   display: flex;
   gap: 20px;
